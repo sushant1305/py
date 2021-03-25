@@ -1,9 +1,7 @@
-import itertools
-
 if __name__ == '__main__':
-    S = int(input())
-    while S < 10**4:
-        S = str(S)
-        a_iter = itertools.groupby(S, lambda x : x[0])
-        print (a_iter)
-        break
+    x = int(input("X:"))
+    y = int(input("Y:"))
+    z = int(input("Z:"))
+    n = int(input("n:"))
+    newlist = [[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1)]
+    print ([[i,j,k] for [i,j,k] in newlist if i+j+k < n])
